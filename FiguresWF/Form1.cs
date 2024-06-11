@@ -21,7 +21,7 @@ namespace FiguresWF
                     fig = new Circle((double)size1_numericUpDown.Value);
                     break;
                 case 2: // квадрат
-                    fig = new square((double)size1_numericUpDown.Value);
+                    fig = new Square1((double)size1_numericUpDown.Value);
                     break;
                 case 3: // трапеция
                         // Предполагаем, что у вас есть соответствующие элементы управления для ввода значений
@@ -130,7 +130,7 @@ namespace FiguresWF
                     fig = new Circle((double)size1_numericUpDown.Value);
                     break;
                 case 2: // квадрат
-                    fig = new square((double)size1_numericUpDown.Value);
+                    fig = new Square1((double)size1_numericUpDown.Value);
                     break;
                 case 3: // трапеция
                         // Предполагаем, что у вас есть соответствующие элементы управления для ввода значений
@@ -142,6 +142,11 @@ namespace FiguresWF
                     break;
             }
             protocol_listBox.Items.Add(fig.ToString() + ": P=" + fig.Perimetr);
+        }
+
+        private void figure_comboBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

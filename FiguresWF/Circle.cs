@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace FiguresWF
 {
-    internal class Square1 : Figure
+    internal class Circle : Figure
     {
-        public double Side { get; set; }
+        public double Radius { get; set; }
 
-        public Square1(double side)
+        public Circle(double radius)
         {
-            Side = side;
+            Radius = radius;
         }
 
         public override double Square()
         {
-            return Side * Side;
+            return Math.PI * Radius * Radius;
         }
 
         public override double Perimetr
         {
-            get { return 4 * Side; }
+            get { return 2 * Math.PI * Radius; }
         }
 
         public override string ToString()
         {
-            return $"Квадрат (Сторона = {Side})";
+            return $"Круг (Радиус = {Radius})";
         }
     }
 }
